@@ -44,8 +44,8 @@
 
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Signin  from "./pages/Signin";
-import Signup from "./pages/Signup";
+// import Signin  from "./pages/Signin";
+// import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 
 
@@ -54,8 +54,8 @@ const AppWrapper = () => {
     <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
       <Routes>
         <Route path="/" element={<Home />} /> {/* Home page route */}
-        <Route path="/signup" element={<Signup />} /> {/* Signup page route */}
-        <Route path="/signin" element={<Signin />} /> {/* Signup page route */}
+        {/* <Route path="/signup" element={<Signup />} /> Signup page route */}
+        {/* <Route path="/signin" element={<Signin />} /> Signup page route */}
       </Routes>
     </div>
   );
