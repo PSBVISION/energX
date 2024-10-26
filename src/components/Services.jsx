@@ -10,7 +10,6 @@ const Services = () => {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   async function botsupport() {
-    
     setAnswer("loading");
     const response = await axios({
       url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCxwF5REJomu_ZzPUK9KPQpr_IbZbq7X-g",
@@ -20,8 +19,7 @@ const Services = () => {
       },
     });
 
-      setAnswer(response["data"]["candidates"][0]["content"]["parts"][0]["text"])
-
+    setAnswer(response["data"]["candidates"][0]["content"]["parts"][0]["text"]);
   }
   return (
     <Section id="how-to-use">
@@ -30,8 +28,15 @@ const Services = () => {
           title="Coustomer Support."
           text="Bot for helping you with any kind of query"
         />
-        <textarea value={question} onChange={(e) => setQuestion(e.target.value)} rows={15} cols={50} className="bg-n-7 text-n-4"></textarea>
-        <Button onClick={botsupport}>Gentrate Answer</Button>
+        <textarea
+          value={question}
+          onChange={(e) => setQuestion(e.target.value)}
+          rows={15}
+          cols={50}
+          className="bg-n-11 text-white outline-none mx-[30%] p-10"
+          placeholder="Assets and liabilities of this product "
+        ></textarea>
+        <Button onClick={botsupport} className="mx-[41%] my-[2%]">Gentrate Answer</Button>
         <pre>{answer}</pre>
       </div>
     </Section>
