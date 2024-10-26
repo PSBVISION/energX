@@ -1,4 +1,4 @@
-"use client";
+
 import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
